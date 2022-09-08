@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mm.css' %}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Dolly & Sabby</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <meta charset="utf-8">
+
+    <script type="text/javascript">
+    var user = '{{request.user}}'
+
+  function getToken(name) {
+      var cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+          var cookies = document.cookie.split(';');
+          for (var i = 0; i < cookies.length; i++) {
+              var cookie = cookies[i].trim();
+              // Does this cookie string begin with the name we want?
+              if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                  break;
+              }
+          }
+      }
+      return cookieValue;
+  }
+  //
+
+  // 
+  var csrftoken = getToken('csrftoken')
+    </script>
+
+  </head>
+  <body >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+            <a  class="navbar-brand" href="{% url 'store' %}">Dolly & Sabby</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto ">
+                <li id = "link-item" class="nav-item active">
+                  <a class="nav-link" href="{% url 'store' %}" >Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li id = "link-item" class="nav-item active">
+                  <a class="nav-link" href="{% url 'products' %}">Shop <span class="sr-only">(current)</span></a>
+                </li>
+                <li id = "link-item" class="nav-item active">
+                  <a class="nav-link" href="#cont">Service <span class="sr-only">()"</span></a>
+                </li>
+
+                <li id = "link-item" class="nav-item active">
+                  <a class="nav-link" href="{% url 'aboutus' %}"> About US! <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li id = "link-item" class="nav-item active">
+                  <a class="nav-link" href="#cont">Contact Us<span class="sr-only">(current)</span></a>
+
+                </li>
+              </ul>
+
+          <div class="form-inline my-2 my-lg-0">
+           	<!-- <a href="" class="btn btn-warning">Login</a> -->
+
+            <a href="{% url 'cart' %}">
+              <img id="cart-icon" src="{%static 'images/cart.png' %}">
+            </a>
+            <p id="cart-total">{{cartItems}}</p>
+
+          </div>
+
+        </nav>
+<div class = "">
+  {% block content %}
+  {% endblock content %}
+</div>
+
+
+<footer class ="" style = "margin-top: 0px; background-color: #94c4d1" id="cont">
+<!-- #47c1c9 -->
+  <div class ="foot">
+  <h2 center>Services</h2>
+  <strong  style = "color: #1c5e2e ;"><p >We help so many young farmers in achieving their goals in Remote Rural areas and those in other locations. We work in collaboration with other farmers
+     to satisfy all our clients in getting the best stocks for them.</p><strong>
+    <div class="row">
+
+          <div class="col-sn-6 col-lg-4">
+              <img src="{% static 'images/call.png' %}" alt="" width="11%">  <h6>  +277 1313 9866 </h6>
+          </div>
+          <div class="col-sn-6 col-lg-4">
+              <img src="{% static 'images/email.png' %}" alt=""  width="11%">  <h6>Dolly@info.co.za</h6>
+          </div>
+          <div class="col-sn-6 col-lg-4">
+              <img src="{% static 'images/Address.png' %}" alt=""  width="11%">  <h6>346 weir street , pretoria Gardens</h6>
+          </div>
+    </div>
+  </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <link rel="text/javaScript" href="{% static 'js/myJavaSc.js' %}">
+  </body>
+</html>

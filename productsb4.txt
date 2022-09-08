@@ -1,0 +1,115 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/mymain.css' %}">
+
+
+<div class="container">
+  <hr>
+   <div class="row">
+
+     <div class="col-lg-4">
+       <img class="thumbnail" src="{% static 'images/01.jpg' %}">
+       <div class="box-element product">
+         <h6><strong>Eggs</strong></h6>
+         <!-- <hr> -->
+         <button class = "btn btn-outline-secondary add-btn">Add to Cart</button>
+         <a class="btn btn-outline-success" href="{% static 'images/01.jpg' %}">View</a>
+         <h4 style="display: inline-block; float: right"><strong>R 50</strong></h4>
+       </div>
+     </div>
+
+     <div class="col-lg-4">
+       <img class="thumbnail" src="{% static 'images/02.jpg' %}">
+       <div class="box-element product">
+         <h6><strong>Chicks</strong></h6>
+         <!-- <hr> -->
+         <button class = "btn btn-outline-secondary add-btn">Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+         <h4 style="display: inline-block;  float: right"><strong>R 35</strong></h4>
+       </div>
+     </div>
+
+     <div class="col-lg-4">
+       <img class="thumbnail" src="{% static 'images/03.jpg' %}">
+       <div class="box-element product">
+         <h6><strong>white eggs</strong></h6>
+         <hr>
+         <button class = "btn btn-outline-secondary add-btn">Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+         <h4 style="display: inline-block; float: right"><strong>R 64</strong></h4>
+       </div>
+     </div>
+     <div class="col-lg-4">
+       <img class="thumbnail" src="{% static 'images/04.jpg' %}">
+       <div class="box-element product">
+         <h6><strong>Broiler</strong></h6>
+           <button class = "btn btn-outline-secondary add-btn">Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+         <h4 style="display: inline-block; float: right"><strong>R 45</strong></h4>
+       </div>
+     </div>
+    <hr>
+     <div class="col-lg-4">
+       <img class="thumbnail" src="{% static 'images/05.jpg' %}">
+       <div class="box-element product">
+         <h6><strong>Chicken Thighs</strong></h6>
+         <!-- <hr> -->
+         <button class = "btn btn-outline-secondary add-btn">Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+         <h4 style="display: inline-block; float: right"><strong>R 35</strong></h4>
+       </div>
+     </div>
+
+     <div class="col-lg-4">
+       <img class="thumbnail" src="{% static 'images/06.jpg' %}">
+       <div class="box-element product">
+         <h6><strong>Full chicken</strong></h6>
+         <!-- <hr> -->
+         <button class = "btn btn-outline-secondary add-btn">Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+         <h4 style="display: inline-block; float: right"><strong>R 70</strong></h4>
+       </div>
+     </div>
+
+     <div class="col-lg-4">
+       <img class="thumbnail" src="{% static 'images/lay-hens.jpg' %}">
+       <div class="box-element product">
+         <h6><strong>Lay hens</strong></h6>
+         <!-- <hr> -->
+         <button class = "btn btn-outline-secondary add-btn">Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+         <h4 style="display: inline-block; float: right"><strong>R 140</strong></h4>
+       </div>
+     </div>
+
+     <div class="col-lg-4">
+       <img class="thumbnail" src="{% static 'images/07.jpg' %}">
+       <div class="box-element product">
+         <h6><strong>Hen</strong></h6>
+         <!-- <hr> -->
+         <button class = "btn btn-outline-secondary add-btn">Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+         <h4 style="display: inline-block; float: right"><strong>R 85</strong></h4>
+       </div>
+     </div>
+
+     <div class="col-lg-4">
+       <img class="thumbnail" src="{% static 'images/Rooster.jpg' %}">
+       <div class="box-element product">
+         <h6><strong>Rooster</strong></h6>
+         <!-- <hr> -->
+         <button class = "btn btn-outline-secondary add-btn">Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+         <h4 style="display: inline-block; float: right"><strong>R 110</strong></h4>
+       </div>
+     </div>
+
+   </div>
+  <!-- </form> -->
+ </div>
+
+
+
+
+{% endblock content %}
